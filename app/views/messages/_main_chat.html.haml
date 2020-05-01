@@ -1,4 +1,29 @@
 .chat-main
-  .chat-main__message-menber
-  .chat-main__message-list
-  .chat-main__message-sent
+  .chat-main__header
+    .chat-main__header-left
+      .chat-main__header-left__group
+        group
+      .chat-main__header-left__member
+        memberlist
+    .chat-main__header-right
+      .chat-main__header-right__edit
+        Edit
+  .chat-main__message
+    .chat-main__message__list
+      .chat-main__message__list__user
+        .chat-main__message__list__user__username
+          username
+        .chat-main__message__list__user__time
+          time
+      .chat-main__message__list__text
+        text message
+  .chat-main__form
+    .chat-main__form__box
+      .chat-main__form__box__text
+        %input(type="text")
+      .chat-main__form__box__icon
+        = link_to "#" do
+          %i.fas.fa-image
+    .chat-main__form__sent
+      Send
+

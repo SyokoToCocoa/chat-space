@@ -1,4 +1,16 @@
 .side-ber
-  .side-ber__group-list
-    .side-ber__user-name
-      
+  .side-ber__top
+    .side-ber__username
+      .side-ber__username__top-items
+        .side-ber__username__top-items__name
+          username
+        .side-ber__username__top-items__icon
+          = link_to "#" do
+            %i.far.fa-edit
+          = link_to "#" do
+            %i.fas.fa-cog
+    .side-ber__group-list
+      .side-ber__group-list__group-name
+        groupname
+      .side-ber__group-list__message
+        new messages
