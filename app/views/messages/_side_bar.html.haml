@@ -3,11 +3,11 @@
     .side-ber__edit
       .side-ber__edit__top-items
         .side-ber__edit__top-items__name
-          username
+          = current_user.name
         .side-ber__edit__top-items__icon
-          = link_to "#" do
+          = link_to do
             %i.far.fa-edit
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             %i.fas.fa-cog
     .side-ber__group-list
       .side-ber__group-list__group-name
