@@ -5,12 +5,15 @@
         .side-ber__edit__top-items__name
           = current_user.name
         .side-ber__edit__top-items__icon
-          = link_to  do
+          = link_to new_group_path do
             %i.far.fa-edit
           = link_to edit_user_path(current_user) do
             %i.fas.fa-cog
     .side-ber__group-list
-      .side-ber__group-list__group-name
-        groupname
-      .side-ber__group-list__message
-        new messages
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            .side-ber__group-list__group-name
+              = group.name
+            .side-ber__group-list__message
+              メッセージはまだありません。
