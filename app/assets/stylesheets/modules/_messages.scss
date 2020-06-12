@@ -11,7 +11,6 @@
   background-color: #2f3e51;
   &__edit {
     height: 100px;
-    width: 300px;
     position: relative;
     background-color: #253141;
     &__top-items {
@@ -42,6 +41,9 @@
   &__group-list {
     height: 100vh;
     width: 300px;
+    a {
+      text-decoration: none;
+    }
     &__group-name {
       margin: 20px 20px 5px 20px;
       font-size: 15px;
@@ -56,19 +58,18 @@
 }
 
 .chat-main{
-  height: 100vh;
+  height: 100px;
   width: calc(100vw - 300px);
   color: black;
   display: block;
   float: right;
   &__header {
     height: 100px;
-    width: calc(100vw - 300px);
-    display: block;
+    display: flex;
     background-color: #ffffff;
     &-left {
       height: 100px;
-      width: 400px;
+      width: calc(100vw - 112px);
       display: block;
       float: left;
       &__group {
@@ -93,6 +94,7 @@
         padding: 0 20px 0 20px;
         border: solid 1px #38aef0;
         line-height: 40px;
+        
         a {
           color: #38aef0;
           text-decoration: none;
@@ -130,15 +132,20 @@
     height: 90px;
     width: calc(100vw - 300px);
     background-color: #ddd;
+    display: flex;
+    position: relative;
+    .form_for {
+      display: flex;
+    }
     &__box {
       height: 90px;
-      /*width: 100vw;*/
-      display: flex;
-      &__text {
+      position: relative;
+      .form__message {
         height: 50px;
-        width: 100%;
+        width: calc(100vw - 505px);
         margin: 20px 0 0 50px;
         background-color: white;
+        border: none;
         input {
           height: 50px;
           width: 100%;
@@ -146,12 +153,15 @@
           border: none;
         }
       }
-      &__icon {
-        height: 50px;
-        margin-top: 20px;
+      .form__mask__image {
+        height: 15px;
+        margin-top: 12px;
         padding-right: 10px;
         background-color: white;
         line-height: 50px;
+        position: absolute;
+        top: 10px;
+        right: 5px;
         a {
           color: black;
         }
@@ -159,20 +169,17 @@
           display: none;
         }
       }
-      &__sent {
-        height: 50px;
-        width: 100px;
-        margin: 20px 40px 0 15px;
-        padding: 0 30px 0 30px;
-        line-height: 50px;
-        text-align: center;
-        background-color: #38aef0;
-        input {
-          background-color: #38aef0;
-          border: none;
-          color: white;          
-        }
-      }
+    }
+    .chat-main__form__sent {
+      height: 50px;
+      width: 100px;
+      margin: 20px 40px 0 15px;
+      padding: 0 30px 0 30px;
+      line-height: 50px;
+      text-align: center;
+      background-color: #38aef0;
+      color: white; 
+      
     }
   }
 }

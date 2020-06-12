@@ -14,14 +14,28 @@
   .chat-main__message
     = render @messages 
   .chat-main__form
-    = form_for [@group, @message] do |f|
+    = form_for [@group, @message], html:{class: 'form_for'} do |f|
       .chat-main__form__box
-        .chat-main__form__box__text
-          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .chat-main__form__box__icon
-          = f.label :image, class: 'form__mask__image' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'hidden'
-        .chat-main__form__box__sent
-          = f.submit 'Send', class: 'chat-main__form__sent'
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'chat-main__form__sent'
 
+
+
+  -# .chat-main__form
+  -#   = form_for [@group, @message] do |f|
+  -#     .chat-main__form__box
+  -#       .chat-main__form__box__text
+  -#         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+  -#       .chat-main__form__box__icon
+  -#         = f.label :image, class: 'form__mask__image' do
+  -#           = icon('fas', 'image', class: 'icon')
+  -#           = f.file_field :image, class: 'hidden'
+  -#       .chat-main__form__box__sent
+  -#         = f.submit 'Send', class: 'chat-main__form__sent'
+
+
+
+  
