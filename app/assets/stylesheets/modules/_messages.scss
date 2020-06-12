@@ -51,6 +51,7 @@
     }
     &__message {
       margin: 0 20px 0 20px;
+      padding-bottom: 20px;
       font-size: 11px;
       color: white;
     }
@@ -58,11 +59,16 @@
 }
 
 .chat-main{
-  height: 100px;
+  height: 99px;
   width: calc(100vw - 300px);
   color: black;
   display: block;
   float: right;
+  &__border {
+    width: calc(100vw - 300px);
+    height: 1px;
+    background-color: #eeeeee;
+  }
   &__header {
     height: 100px;
     display: flex;
